@@ -27,12 +27,12 @@ function Login() {
              <p className="text-sm">Get started with Appointments.</p>
            </div>
              
-               <form className="space-y-6">
+           <form className="space-y-6">
           
-          {/* Full Name */}
-          <div className="space-y-2">
-            <label className="text-sm font-medium text-[#ABB8C4]">Full name</label>
-            <div className="relative">
+             {/* Full Name */}
+           <div className="space-y-2 mb-9">
+            <label className="text-xs font-medium text-gray-400 " >Full name</label>
+              <div className="relative">
               <CiUser className="absolute left-3 top-1/2 -translate-y-1/2 text-[#ABB8C4] w-5 h-5" />
               <input 
                 type="text" 
@@ -80,8 +80,8 @@ function Login() {
       </div>
       {/* Right Side: Image */} 
 
-      <div className="hidden md:block md:w-1/2 lg:w-2/3">
-        <img src={LBanner} alt="Login Banner" className='h-[450px] w-[450px]' />
+      <div className="relative -top-10 hidden  md:flex  h-150 w-180 md:w-1/2 ">
+        <img src={LBanner} alt="Login Banner" className='  rounded ' />
       </div>
     </div>
   </main>
