@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+.container{
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+.family-plus {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.family-plus-bold {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.family-plus-extrabold {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+.main{
+  background-color: #131619;
+  color: white;
+  
+}
