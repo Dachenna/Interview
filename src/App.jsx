@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './Components/Navbar.jsx'
 import Login from './Components/Login.jsx'
-import Home from './Components/Home.jsx'
+import Dashboard from './Components/Dashboard.jsx'
 import Footer from './Components/Footer.jsx'
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
       <div>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Dashboard />} />
           <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
