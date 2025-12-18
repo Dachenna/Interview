@@ -17,7 +17,7 @@ function Login() {
 
  return(
   <main className='main'>
-    <div className=" relative flex h-screen w-full">
+    <div className=" relative flex h-screen w-full overflow-x-hidden">
 
       {/* Left Side: Login Form */}
       <div className="flex w-full items-center justify-center px-8 md:w-1/2 lg:px-24">
@@ -37,7 +37,7 @@ function Login() {
               <input 
                 type="text" 
                 placeholder="John Doe"
-                className="w-full bg-[#1A1D21] border border-[#363A3D] rounded-md py-3 pl-10 pr-4 focus:outline-none focus:border-[#24AE7C] transition-colors"
+                className="w-full bg-gray-400 border border-[#363A3D] rounded-md py-3 pl-10 pr-4 focus:outline-none focus:border-[#24AE7C] transition-colors"
               />
             </div>
           </div>
