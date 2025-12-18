@@ -22,7 +22,7 @@ function Login() {
       {/* Left Side: Login Form */}
       <div className="flex w-full items-center justify-center px-8 md:w-1/2 lg:px-24">
         <div className="w-full max-w-md">
-           <div className='m-auto'>
+           <div className='m-auto py-5'>
              <h2 className='text-xl family-plus-bold font-bold'>Hi there, . . . </h2>
              <p className="text-sm">Get started with Appointments.</p>
            </div>
@@ -33,7 +33,7 @@ function Login() {
            <div className="space-y-2 mb-9">
             <label className="text-xs font-medium text-gray-400 " >Full name</label>
               <div className="relative">
-              <CiUser className="absolute left-3 top-1/2 -translate-y-1/2 text-[#ABB8C4] w-5 h-5" />
+              <CiUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray w-5 h-5" />
               <input 
                 type="text" 
                 placeholder="John Doe"
@@ -44,7 +44,7 @@ function Login() {
 
           {/* Email Address */}
           <div className="space-y-2">
-            <label className="text-sm font-medium text-[#ABB8C4]">Email address</label>
+            <label className="font-medium text-gray-400 text-xs">Email address</label>
             <div className="relative">
               <CiMail className="absolute left-3 top-1/2 -translate-y-1/2 text-[#ABB8C4] w-5 h-5" />
               <input 
@@ -57,7 +57,7 @@ function Login() {
 
           {/* Phone Number */}
           <div className="space-y-2">
-            <label className="text-sm font-medium py-2 text-[#ABB8C4]">Phone number</label>
+            <label className="text-xs font-medium py-2 text-gray-400">Phone number</label>
             <div className="relative">
               <FaPhoneAlt className="absolute left-3 top-1/2 -translate-y-1/2 text-[#ABB8C4] w-5 h-5" />
               <input 
