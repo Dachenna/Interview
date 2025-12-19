@@ -1,5 +1,5 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { CiUser } from "react-icons/ci";
 import { CiMail } from "react-icons/ci";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -7,13 +7,20 @@ import { GoLock } from "react-icons/go"
 import LBanner from '../assets/login-banner.png';
 
 function Login() {
+  const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [fullName, setFullName] = useState('')
+  const [phoneNumber, setPhoneNumber] = useState('')
+
+  
 
   const handleSubmit = (e) => {
     // Handle login logic here
     e.preventDefault();
     console.log('Email:', email, 'Password:', password);
+    console.log('Full Name:', fullName, 'Phone Number:', phoneNumber);
+    navigate('/')
   }
 
  return(
@@ -28,7 +35,7 @@ function Login() {
              <p className="text-sm">Get started with Appointments.</p>
            </div>
              
-           <form className="space-y-6">
+           <form className="space-y-6" onSubmit={handleSubmit}>
           
              {/* Full Name */}
            <div className="space-y-2 mb-9">
@@ -38,7 +45,9 @@ function Login() {
               <input 
                 type="text" 
                 placeholder="John Doe"
-                className="w-full bg-[#1A1D21] border border-[#363A3D] rounded-md py-3 pl-10 pr-4 focus:outline-none focus:border-[#24AE7C] transition-colors"
+                className="w-full bg-[#1A1D21] border border-[#363A3D] rounded-md py-3
+                 pl-10 pr-4 focus:outline-none focus:border-[#24AE7C] transition-colors"
+                onChange = {(e) => setFullName(e.target.value)}
               />
             </div>
           </div>
@@ -51,7 +60,9 @@ function Login() {
               <input 
                 type="email" 
                 placeholder="johndoe@gmail.com"
-                className="w-full bg-[#1A1D21] border border-[#363A3D] rounded-md py-3 pl-10 pr-4 focus:outline-none focus:border-[#24AE7C] transition-colors"
+                className="w-full bg-[#1A1D21] border border-[#363A3D] rounded-md py-3
+                 pl-10 pr-4 focus:outline-none focus:border-[#24AE7C] transition-colors"
+                onChange = {(e) => setEmail(e.target.value)}
               />
             </div>
           </div>
@@ -64,7 +75,9 @@ function Login() {
               <input 
                 type="password" 
                 placeholder="* * * * * * * "
-                className="w-full bg-[#1A1D21] border border-[#363A3D] rounded-md py-3 pl-10 pr-4 focus:outline-none focus:border-[#24AE7C] transition-colors"
+                className="w-full bg-[#1A1D21] border border-[#363A3D] 
+                  rounded-md py-3 pl-10 pr-4 focus:outline-none focus:border-[#24AE7C] transition-colors"
+                onChange = {(e) => setPassword(e.target.value)}
               />
             </div>
           </div>
@@ -77,7 +90,9 @@ function Login() {
               <input 
                 type="tel" 
                 placeholder="+1 234 567 890"
-                className="w-full bg-[#1A1D21] border border-[#363A3D] rounded-md py-3 pl-10 pr-4 focus:outline-none focus:border-[#24AE7C] transition-colors"
+                className="w-full bg-[#1A1D21] border border-[#363A3D] rounded-md
+                 py-3 pl-10 pr-4 focus:outline-none focus:border-[#24AE7C] transition-colors"
+                onChange = {(e) => setPhoneNumber(e.target.value)}
               />
             </div>
           </div>

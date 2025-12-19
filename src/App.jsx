@@ -9,6 +9,7 @@ import ScheduleModal from './Components/Appointments.jsx'
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+
   return (
     <BrowserRouter>
       <div>
