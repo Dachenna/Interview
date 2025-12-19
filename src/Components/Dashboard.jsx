@@ -1,4 +1,4 @@
-import { LuCalendarDays, LuHourglass, LuAlertTriangle } from "react-icons/lu";
+import { LuCalendarDays, LuHourglass, LuTriangleAlert } from "react-icons/lu";
 
 const DashboardContent = () => {
   return (
@@ -32,7 +32,7 @@ const DashboardContent = () => {
         {/* Cancelled Card */}
         <div className="p-6 rounded-2xl bg-[#1A1D21] border border-white/5 flex flex-col gap-4">
           <div className="flex items-center gap-4">
-            <LuAlertTriangle className="text-red-500 text-3xl" />
+            <LuTriangleAlert className="text-red-500 text-3xl" />
             <span className="text-4xl font-bold">56</span>
           </div>
           <p className="text-gray-400 text-sm">Total number of cancelled appointments</p>

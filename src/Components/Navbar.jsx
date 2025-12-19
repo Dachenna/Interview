@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Logo from '../assets/logo.png'; 
 
-const Navbar = () => {
+const Navbar = ({ onOpenSchedule }) => {
   const location = useLocation();
   const isMainPage = location.pathname === '/';
 
@@ -19,7 +19,7 @@ const Navbar = () => {
       {/* Right side: This is will always be displayed */}
       {isMainPage &&  (
         <div className='flex gap-2'>
-          <button >Add schedule</button>
+          <button onClick={onOpenSchedule}>Add schedule</button>
         </div>
       )  }
     </nav>

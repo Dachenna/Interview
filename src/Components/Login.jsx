@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { CiUser } from "react-icons/ci";
 import { CiMail } from "react-icons/ci";
 import { FaPhoneAlt } from "react-icons/fa";
+import { GoLock } from "react-icons/go"
 import LBanner from '../assets/login-banner.png';
 
 function Login() {
@@ -17,7 +18,7 @@ function Login() {
 
  return(
   <main className='main'>
-    <div className=" relative flex h-screen w-full overflow-x-hidden">
+    <div className=" relative flex h-screen w-full overflow-y-hidden">
 
       {/* Left Side: Login Form */}
       <div className="flex w-full items-center justify-center px-8 md:w-1/2 lg:px-24">
@@ -37,7 +38,7 @@ function Login() {
               <input 
                 type="text" 
                 placeholder="John Doe"
-                className="w-full bg-gray-400 border border-[#363A3D] rounded-md py-3 pl-10 pr-4 focus:outline-none focus:border-[#24AE7C] transition-colors"
+                className="w-full bg-[#1A1D21] border border-[#363A3D] rounded-md py-3 pl-10 pr-4 focus:outline-none focus:border-[#24AE7C] transition-colors"
               />
             </div>
           </div>
@@ -50,6 +51,19 @@ function Login() {
               <input 
                 type="email" 
                 placeholder="johndoe@gmail.com"
+                className="w-full bg-[#1A1D21] border border-[#363A3D] rounded-md py-3 pl-10 pr-4 focus:outline-none focus:border-[#24AE7C] transition-colors"
+              />
+            </div>
+          </div>
+
+          {/* Password */}
+          <div className="space-y-2">
+            <label className="font-medium text-gray-400 text-xs">Password</label>
+            <div className="relative">
+              <GoLock className="absolute left-3 top-1/2 -translate-y-1/2 text-[#ABB8C4] w-5 h-5" />
+              <input 
+                type="password" 
+                placeholder="* * * * * * * "
                 className="w-full bg-[#1A1D21] border border-[#363A3D] rounded-md py-3 pl-10 pr-4 focus:outline-none focus:border-[#24AE7C] transition-colors"
               />
             </div>
@@ -81,7 +95,7 @@ function Login() {
       {/* Right Side: Image */} 
 
       <div className="relative -top-10 hidden  md:flex  h-150 w-180 md:w-1/2 ">
-        <img src={LBanner} alt="Login Banner" className='  rounded ' />
+        <img src={LBanner} alt="Login Banner" className='  rounded-md ' />
       </div>
     </div>
   </main>
